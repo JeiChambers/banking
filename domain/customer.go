@@ -1,7 +1,6 @@
 package domain
 
-// Domain Object
-
+// Customer Domain|Business Object
 type Customer struct {
 	Id 			string
 	Name 		string
@@ -11,7 +10,12 @@ type Customer struct {
 	Status 		string
 }
 
+// CustomerRepository Secondary port
+// Remember: interfaces extend functionality to different types
 type CustomerRepository interface {
 	FindAll() ([]Customer, error)
 }
+
+
+
 

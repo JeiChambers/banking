@@ -1,12 +1,14 @@
 package service
-
+// CustomerService package wires the two ports together via CustomerService
 import "github.com/JeiChambers/banking/domain"
 
+//Defines Customer Service Adapter
 type CustomerService interface {
 	GetAllCustomers() ([]domain.Customer, error)
 }
 
 type DefaultCustomerService struct {
+	// has a dependency of:
 	repo domain.CustomerRepository
 }
 
